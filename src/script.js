@@ -5,9 +5,9 @@ const form2 = {
   gender: ['male', 'female'],
   course: ['java', 'javascript', 'ruby', 'php', 'c#'],
   cityAndState: [
-    { lietuva: ['vienas', 'du', 'trys'] },
-    { latvija: ['1', 'du', 'trys'] },
-    { estija: ['1', '2', 'trys', 'lapai'] },
+    { lietuva: ['kaunas', 'vilnius', 'klaipeda'] },
+    { latvija: ['vienas', 'du', 'trys'] },
+    { estija: ['1', '2', '3', '4'] },
   ],
 }
 
