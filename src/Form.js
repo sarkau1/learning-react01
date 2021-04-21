@@ -6,6 +6,8 @@ import {
   validateEmail,
   validatePhoneNumber,
 } from './script.js'
+import SelectComponent from './components/SelectComponent/SelectComponent.jsx'
+import InputElement from './components/InputElement/InputElement.jsx'
 
 import { useForm } from 'react-hook-form'
 
@@ -20,14 +22,16 @@ const Form = () => {
   return (
     <form action="" name="form1" onSubmit={handleSubmit(onSubmit)}>
       <h4>Student Name</h4>
+      <SelectComponent/>
       <div className="container name-group">
         <div>
-          <input
+         {/*  <input
             type="text"
             ref={register}
             name="firstName"
             ref={register({ required: true })}
-          />
+          /> */}
+          <InputElement name = 'firstName' className='hello' ref = {register}/>
           <br />
           <label id="firstNameLabel" htmlFor="firstname">
             First Name
@@ -46,11 +50,12 @@ const Form = () => {
           <br />
         </div>
         <div>
-          <input
+       {/*    <input
             type="text"
             name="lastName"
             ref={register({ required: true })}
-          />
+          /> */}
+           <InputElement name = 'lastName' className='hello'/>
           <br />
           <label id="lastNameLabel" htmlFor="lastname">
             Last Name
@@ -95,14 +100,14 @@ const Form = () => {
       </div>
       <div className="form-group margin-bottom-25">
         <h4>Address</h4>
-        <input type="text" />
+        <InputElement />
         <br />
         <label id="streetLabel" htmlFor="street">
           Street Address
         </label>
       </div>
       <div className="form-group margin-bottom-25">
-        <input type="text" />
+      <InputElement />
         <br />
         <label id="streetLineTwoLabel" htmlFor="streetLineTwoLabel">
           Street Address Line 2
@@ -126,7 +131,7 @@ const Form = () => {
         </div>
       </div>
       <div className="form-group margin-bottom-25">
-        <input type="text" />
+      <InputElement />
         <br />
         <label id="postCodeLabel" htmlFor="postcode">
           Postal / Zip Code
@@ -135,14 +140,15 @@ const Form = () => {
       <div className="container form-group-into-two-collumn">
         <div>
           <h4>Student E-mail</h4>
-          <input
+          {/* <input
             id="email"
             type="text"
             placeholder="ex: myname@example.com"
             name="email"
             ref={register({ pattern: /\S+@\S+\.\S+/i })}
             // onChange={validateEmail(value)}
-          />
+          /> */}
+            <InputElement name ='email' />
           <br />
 
           {errors.email && (
@@ -154,41 +160,44 @@ const Form = () => {
         </div>
         <div>
           <h4 id="mobileNumberLabel">Mobile Number</h4>
-          <input
+       {/*    <input
             id="mobileNumber"
             type="text"
             placeholder="(000) 000-0000"
             //  onChange={validatePhoneNumber(this.value, this.id)}
-          />
+          /> */}
+            <InputElement />
           <div id="mobileNumber-error" className="error"></div>
         </div>
       </div>
       <div className="container form-group-into-two-collumn">
         <div>
           <h4 id="phoneNumberLabel">Phone Number</h4>
-          <input
+         {/*  <input
             id="phoneNumber"
             type="text"
             placeholder="(000) 000-0000"
             name="text1"
             // onChange={validatePhoneNumber(this.value, this.id)}
-          />
+          /> */}
+            <InputElement />
           <div id="phoneNumber-error" className="error"></div>
         </div>
         <div>
           <h4 id="workNumberLabel">Work Number</h4>
-          <input
+         {/*  <input
             id="workNumber"
             type="text"
             placeholder="(000) 000-0000"
             //   onChange={validatePhoneNumber(this.value, this.id)}
-          />
+          /> */}
+            <InputElement />
           <div id="workNumber-error" className="error"></div>
         </div>
       </div>
       <div className="form-group-into-two-collumn margin-bottom-25">
         <h4 id="companyLabel">Company</h4>
-        <input type="text" />
+        <InputElement />
       </div>
       <div className="form-group-into-two-collumn margin-bottom-25">
         <h4 id="coursesLabel">Courses</h4>
